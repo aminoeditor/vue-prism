@@ -6,6 +6,7 @@
 
 <script>
 	import Prism from 'prismjs';
+	import Normalizer from 'prismjs/plugins/normalize-whitespace/prism-normalize-whitespace';
 	export default {
 		data () {
 			return {
@@ -14,15 +15,24 @@
 		},
 		props: [
 			'code',
-			'language'
+			'language',
+			'plugins'
 		],
 		computed: {
 			highlightedCode () {
-				console.log(this.$el);
-				return this.instance.highlight(this.code, this.instance.languages[this.language]);
+				return this.instance.highlight(this.normalizeWhitespace(this.code), this.instance.languages[this.language]);
 			},
 			codeClass () {
 				return 'language-' + this.language
+			}
+		},
+		methods: {
+			normalizeWhitespace (code) {
+				if (plugins.whitespace) {
+					const normalizer = new Normalizer(plugins.whitespace);
+					return normalizer.normalize(code);
+				}
+				return code;
 			}
 		}
 	}
