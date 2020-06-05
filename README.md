@@ -16,8 +16,6 @@ Vue.use(VuePrism);
 // the rest of main.js below
 ```
 
-**Usage**
-*******
 ## _Component_
 ```
 <template>
@@ -37,6 +35,11 @@ export default {
 	  }
 }
 </script>
+```
+
+## _Directive_
+```
+<code v-prism:css>body { background: blue; }</code>
 ```
 
 ## _Plugin Support_
@@ -70,10 +73,4 @@ export default {
 	}
 }
 </script>
-```
-
-
-## _Directive_
-```
-<code v-prism:css>body { background: blue; }</code>
 ```
