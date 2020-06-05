@@ -31,13 +31,48 @@ import  'prismjs/themes/prism.css';
 
 export default {
 	data () {
-		  return {
-			  code: 'body { background: blue; }'
-		  }
+		return {
+			code: 'body { background: blue; }'
+		}
 	  }
 }
 </script>
 ```
+
+_Plugin Support_
+**Normalize Whitespace** _(component only)_
+```
+<template>
+	<prism language="css" :code="code" :pluginConfigs="pluginConfigs"></prism>
+</template>
+
+<script>
+import 'prismjs/themes/prism.css';
+
+export default {
+	data () {
+		return {
+			code: 'body { background: blue; }',
+			pluginConfigs: {
+				whitespace: {
+					'remove-trailing': true,
+					'remove-indent': true,
+					'left-trim': true,
+					'right-trim': true,
+					'break-lines': 80,
+					'indent': 1,
+					'remove-initial-line-feed': false,
+					'tabs-to-spaces': 4,
+					'spaces-to-tabs': 4
+				}
+			}
+		}
+	}
+}
+</script>
+```
+
+
 _Directive_
 ```
 <code v-prism:css>body { background: blue; }</code>
