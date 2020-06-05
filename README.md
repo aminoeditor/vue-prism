@@ -1,5 +1,7 @@
-# VuePrism
+<div style="text-align: center;">
 ![Vue Prism](vue-prism.png)
+# VuePrism
+</div>
 
 **Install**
 ```
