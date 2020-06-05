@@ -1,6 +1,6 @@
 <div style="text-align: center;">
-![Vue Prism](vue-prism.png)
-# VuePrism
+<img src="vue-prism.png" />
+<h1>Vue Prism</h1>
 </div>
 
 **Install**
