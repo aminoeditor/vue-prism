@@ -1,7 +1,5 @@
 <template>
-	<pre>
-		<code v-bind:class="codeClass" v-html="highlightedCode"></code>
-	</pre>
+	<pre v-bind:class="codeClass"><code v-bind:class="codeClass" v-html="highlightedCode"></code></pre>
 </template>
 
 <script>
@@ -24,12 +22,15 @@
 			},
 			codeClass () {
 				return 'language-' + this.language
+			},
+			pluginConfig () {
+				return this.plugins || {};
 			}
 		},
 		methods: {
 			normalizeWhitespace (code) {
-				if (plugins.whitespace) {
-					const normalizer = new Normalizer(plugins.whitespace);
+				if (this.pluginConfig.whitespace) {
+					const normalizer = new Normalizer(this.pluginConfig.whitespace);
 					return normalizer.normalize(code);
 				}
 				return code;
