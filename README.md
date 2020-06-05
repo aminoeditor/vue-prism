@@ -1,6 +1,6 @@
 <p align="center">
 	<img src="vue-prism.png" />
-	<h1 align="center">Vue Prism</h1>
+	<h1 align="center" style="text-align: center;">Vue Prism</h1>
 </p>
 
 **Install**
