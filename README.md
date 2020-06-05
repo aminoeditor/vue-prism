@@ -1,4 +1,5 @@
 # VuePrism
+![Vue Prism](vue-prism.png)
 
 **Install**
 ```
