@@ -18,7 +18,7 @@ Vue.use(VuePrism);
 
 **Usage**
 *******
-_Component_
+## _Component_
 ```
 <template>
 	<prism language="css" :code="code"></prism>
@@ -39,7 +39,7 @@ export default {
 </script>
 ```
 
-_Plugin Support_
+## _Plugin Support_
 **Normalize Whitespace** _(component only)_
 ```
 <template>
@@ -73,7 +73,7 @@ export default {
 ```
 
 
-_Directive_
+## _Directive_
 ```
 <code v-prism:css>body { background: blue; }</code>
 ```
