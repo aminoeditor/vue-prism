@@ -7,7 +7,7 @@
 npm install --save prismjs @aminoeditor/vue-prism
 ```
 
-**Add to vue**
+**Add to vue Globally**
 *main.js*
 ```
 import Vue from 'vue';
@@ -42,6 +42,17 @@ export default {
 ## _Directive_
 ```
 <code v-prism:css>body { background: blue; }</code>
+```
+
+**Add to vue Locally**
+*MyComponent.vue*
+```
+import { VuePrismComponent as prism } from '@aminoeditor/vue-prism';
+export default {
+	components: {
+		prism
+	}
+}
 ```
 
 ## _Plugin Support_
