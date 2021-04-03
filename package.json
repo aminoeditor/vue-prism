@@ -1,6 +1,6 @@
 {
   "name": "@aminoeditor/vue-prism",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "Easily integrate Prsim.js code highlighting into Vue.js",
   "main": "dist/vue-prism.js",
   "scripts": {
