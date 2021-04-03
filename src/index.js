@@ -6,3 +6,6 @@ export default {
 		Vue.directive("prism", Directive);
 	}
 };
+
+export { Component as VuePrismComponent }
+export { Directive as VuePrismDirective }
